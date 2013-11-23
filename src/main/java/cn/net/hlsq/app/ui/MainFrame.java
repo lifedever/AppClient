@@ -5,9 +5,6 @@ import java.awt.Toolkit;
 
 import javax.swing.JFrame;
 
-import cn.net.hlsq.app.constant.PropEnum;
-import cn.net.hlsq.app.utils.PropUtils;
-
 /**
  * 主窗体
  * 
@@ -16,6 +13,11 @@ import cn.net.hlsq.app.utils.PropUtils;
  * @createDate 2013年11月23日 下午3:21:49
  */
 public class MainFrame extends MyFrame {
+
+	private String appName = "桌面应用";
+	private int width = 600;
+	private int height = 300;
+
 	/**
 	 * 
 	 */
@@ -28,15 +30,13 @@ public class MainFrame extends MyFrame {
 
 	private void initProp() {
 
-		setTitle(PropUtils.getValue(PropEnum.MAIN.getPropName(), "app.name"));
+		setTitle(appName);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		Toolkit kit = this.getToolkit();
 		Dimension winSize = kit.getScreenSize();
-		setBounds(winSize.width / 4,
-				winSize.height / 4, // 位置
-				Integer.parseInt(PropUtils.getValue(PropEnum.MAIN.getPropName(), "app.width")),
-				Integer.parseInt(PropUtils.getValue(PropEnum.MAIN.getPropName(), "app.heigth"))); // 大小
+		setBounds(winSize.width / 4, winSize.height / 4, // 位置
+				width, height); // 大小
 	}
 
 	private void initComp() {
@@ -48,4 +48,29 @@ public class MainFrame extends MyFrame {
 	public static void main(String[] args) {
 		new MainFrame();
 	}
+
+	public String getAppName() {
+		return appName;
+	}
+
+	public int getWidth() {
+		return width;
+	}
+
+	public int getHeight() {
+		return height;
+	}
+
+	public void setAppName(String appName) {
+		this.appName = appName;
+	}
+
+	public void setWidth(int width) {
+		this.width = width;
+	}
+
+	public void setHeight(int height) {
+		this.height = height;
+	}
+
 }
