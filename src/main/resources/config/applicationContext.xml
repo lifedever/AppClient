@@ -18,7 +18,7 @@
 	<!-- enable autowire -->
 	<context:annotation-config />
 
-	<bean id="databaseProperties"
+	<bean id="properties"
 		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
 		<property name="locations">
 			<list>
@@ -29,7 +29,7 @@
 	</bean>
 
 	<context:property-placeholder
-		properties-ref="databaseProperties" />
+		properties-ref="properties" />
 
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">

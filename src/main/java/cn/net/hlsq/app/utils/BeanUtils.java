@@ -10,7 +10,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @email gefangshuai@163.com
  * @createDate 2013年11月23日 下午7:00:06
  */
-public final class BeanUtils<T> {
+public final class BeanUtils {
 	private static ApplicationContext applicationContext;
 	static {
 		applicationContext = new ClassPathXmlApplicationContext("config/applicationContext.xml");

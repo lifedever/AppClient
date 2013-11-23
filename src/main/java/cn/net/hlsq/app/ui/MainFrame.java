@@ -5,6 +5,10 @@ import java.awt.Toolkit;
 
 import javax.swing.JFrame;
 
+import org.springframework.stereotype.Component;
+
+import cn.net.hlsq.app.model.AppInfo;
+
 /**
  * 主窗体
  * 
@@ -12,65 +16,36 @@ import javax.swing.JFrame;
  * @email gefangshuai@163.com
  * @createDate 2013年11月23日 下午3:21:49
  */
+
+@Component("mainFrame")
 public class MainFrame extends MyFrame {
 
-	private String appName = "桌面应用";
-	private int width = 600;
-	private int height = 300;
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
-	public MainFrame() {
+	private AppInfo appInfo;
+
+	public MainFrame(AppInfo appInfo) {
+		this.appInfo = appInfo;
+		// this.appInfo = (AppInfo) BeanUtils.getBean("appInfo");
 		initProp();
 		initComp();
 	}
 
 	private void initProp() {
 
-		setTitle(appName);
+		setTitle(appInfo.getAppName());
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		Toolkit kit = this.getToolkit();
 		Dimension winSize = kit.getScreenSize();
 		setBounds(winSize.width / 4, winSize.height / 4, // 位置
-				width, height); // 大小
+				appInfo.getAppWidth(), appInfo.getAppHeight()); // 大小
 	}
 
 	private void initComp() {
 		setJMenuBar(new MyMenuBar());
 		MyPanel panel = new MyPanel();
 		setContentPane(panel);
-	}
-
-	public static void main(String[] args) {
-		new MainFrame();
-	}
-
-	public String getAppName() {
-		return appName;
-	}
-
-	public int getWidth() {
-		return width;
-	}
-
-	public int getHeight() {
-		return height;
-	}
-
-	public void setAppName(String appName) {
-		this.appName = appName;
-	}
-
-	public void setWidth(int width) {
-		this.width = width;
-	}
-
-	public void setHeight(int height) {
-		this.height = height;
 	}
 
 }

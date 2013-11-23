@@ -6,8 +6,6 @@ public class MyPanel extends JPanel {
 	
 	private static final long serialVersionUID = 1L;
 	public MyPanel() {
-		JPanel panel = new JPanel();
-		panel.add(this);
 	}
 
 }

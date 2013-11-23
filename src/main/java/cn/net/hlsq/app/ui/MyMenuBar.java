@@ -8,7 +8,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 
-import cn.net.hlsq.app.AboutActionHandler;
+import cn.net.hlsq.app.handler.AboutActionHandler;
 
 public class MyMenuBar extends JMenuBar {
 	private static final long serialVersionUID = 1L;

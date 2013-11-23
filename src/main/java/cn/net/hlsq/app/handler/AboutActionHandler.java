@@ -1,4 +1,4 @@
-package cn.net.hlsq.app;
+package cn.net.hlsq.app.handler;
 
 import java.awt.Frame;
 import java.awt.event.ActionEvent;
