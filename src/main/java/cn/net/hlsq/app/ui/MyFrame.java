@@ -15,16 +15,11 @@ public class MyFrame extends JFrame {
 	static {
 		try {
 			/* 设置皮肤为BeautyEye */
-			BeautyEyeLNFHelper.frameBorderStyle = BeautyEyeLNFHelper.FrameBorderStyle.osLookAndFeelDecorated;
+			BeautyEyeLNFHelper.frameBorderStyle = BeautyEyeLNFHelper.FrameBorderStyle.translucencyAppleLike;
 			BeautyEyeLNFHelper.launchBeautyEyeLNF();
 			// UIManager.put("RootPane.setupButtonVisible", false);//设置按钮启用或禁用
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-
-	public MyFrame() {
-		setVisible(true);
-	}
-
 }

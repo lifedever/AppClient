@@ -1,8 +1,10 @@
 package cn.net.hlsq.app.ui;
 
+import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 
 import org.springframework.stereotype.Component;
@@ -24,11 +26,17 @@ public class MainFrame extends MyFrame {
 
 	private AppInfo appInfo;
 
+	public MainFrame() {
+		 initProp();
+		 initComp();
+	}
+
 	public MainFrame(AppInfo appInfo) {
 		this.appInfo = appInfo;
 		// this.appInfo = (AppInfo) BeanUtils.getBean("appInfo");
 		initProp();
 		initComp();
+		setVisible(true);
 	}
 
 	private void initProp() {
@@ -44,7 +52,7 @@ public class MainFrame extends MyFrame {
 
 	private void initComp() {
 		setJMenuBar(new MyMenuBar());
-		MyPanel panel = new MyPanel();
+		MainPanel panel = new MainPanel();
 		setContentPane(panel);
 	}
 

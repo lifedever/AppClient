@@ -1,11 +1,12 @@
 package cn.net.hlsq.app.handler;
 
-import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JDialog;
-import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
+import cn.net.hlsq.app.model.AppInfo;
+import cn.net.hlsq.app.utils.BeanUtils;
 
 /**
  * 菜单关于按钮的点击事件
@@ -17,11 +18,8 @@ import javax.swing.JLabel;
 public class AboutActionHandler implements ActionListener {
 
 	public void actionPerformed(ActionEvent e) {
-		JDialog dialog = new JDialog(new Frame(), "关于", true);
-		dialog.setDefaultCloseOperation(JDialog.HIDE_ON_CLOSE);
-		dialog.setSize(300, 180);
-		dialog.add(new JLabel("这个是对话框"));
-		dialog.setVisible(true); // 显示对话框，窗口阻塞，不往下执行，只有等到对话框关闭了才往下执行。
+		AppInfo appInfo = (AppInfo) BeanUtils.getBean("appInfo");
+		JOptionPane.showMessageDialog(null, appInfo.getAppAbout(), "关于", JOptionPane.WARNING_MESSAGE);
 	}
 
 }
