@@ -1,15 +1,15 @@
 package cn.net.hlsq.app.ui;
 
-import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 
-import javax.swing.JButton;
 import javax.swing.JFrame;
 
 import org.springframework.stereotype.Component;
 
 import cn.net.hlsq.app.model.AppInfo;
+import cn.net.hlsq.app.ui.core.MyFrame;
+import cn.net.hlsq.app.utils.BeanUtils;
 
 /**
  * 主窗体
@@ -27,8 +27,10 @@ public class MainFrame extends MyFrame {
 	private AppInfo appInfo;
 
 	public MainFrame() {
-		 initProp();
-		 initComp();
+		appInfo = (AppInfo) BeanUtils.getBean("appInfo");
+		initProp();
+		initComp();
+		setVisible(true);
 	}
 
 	public MainFrame(AppInfo appInfo) {

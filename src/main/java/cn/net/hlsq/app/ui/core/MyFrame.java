@@ -1,4 +1,4 @@
-package cn.net.hlsq.app.ui;
+package cn.net.hlsq.app.ui.core;
 
 import javax.swing.JFrame;
 
