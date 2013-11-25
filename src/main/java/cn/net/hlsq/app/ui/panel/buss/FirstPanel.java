@@ -1,13 +1,17 @@
-package cn.net.hlsq.app.ui.panel;
+package cn.net.hlsq.app.ui.panel.buss;
 
 import java.awt.Color;
 
 import javax.swing.GroupLayout;
 
 import cn.net.hlsq.app.constant.StepEnum;
+import cn.net.hlsq.app.ui.panel.BasePanel;
+
 import javax.swing.JLabel;
 import javax.swing.GroupLayout.Alignment;
+
 import java.awt.Font;
+
 import javax.swing.LayoutStyle.ComponentPlacement;
 
 public class FirstPanel extends BasePanel {

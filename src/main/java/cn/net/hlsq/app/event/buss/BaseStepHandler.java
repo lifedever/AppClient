@@ -14,7 +14,7 @@ import cn.net.hlsq.app.ui.button.FirstButton;
 import cn.net.hlsq.app.ui.button.SecondButton;
 import cn.net.hlsq.app.ui.button.ThirdButton;
 
-public class BaseStepOperation implements ActionListener {
+public class BaseStepHandler implements ActionListener {
 	CardLayout cardLayout;
 	JPanel cardPanel;
 
@@ -37,8 +37,6 @@ public class BaseStepOperation implements ActionListener {
 		return (BaseButton) parent.getComponent(1);
 	}
 
-	// TODO 待解决step值变更问题
-
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		BaseButton button = (BaseButton) e.getSource();
@@ -50,9 +48,9 @@ public class BaseStepOperation implements ActionListener {
 			secondButtonAction(e);
 
 		} else if (button instanceof ThirdButton) {
-			thirdButtonAction();
+			thirdButtonAction(e);
 		}
-		
+
 		if (BaseButton.step == 0) {
 			getFirstButton(e).setEnabled(false);
 			getSecondButton(e).setEnabled(true);
@@ -85,7 +83,22 @@ public class BaseStepOperation implements ActionListener {
 	 * 第三个按钮的事件
 	 * 
 	 */
-	private void thirdButtonAction() {
-		JOptionPane.showConfirmDialog(null, "确定要重新开始吗？\n 注意：之前的操作选项都会被清除！", "重新开始", JOptionPane.YES_NO_OPTION);
+	private void thirdButtonAction(ActionEvent e) {
+		int i = JOptionPane.showConfirmDialog(null, "确定要重新开始吗？\n 注意：之前的操作选项都会被清除！", "重新开始", JOptionPane.YES_NO_OPTION);
+		if (i == 0) {
+			resetPanel(e);
+		}
+
+	}
+
+	/**
+	 * 初始化
+	 * 
+	 * @author gefangshuai
+	 * @param e
+	 */
+	private void resetPanel(ActionEvent e) {
+		getCardLayout(e).first(cardPanel);
+		BaseButton.step = 0;
 	}
 }

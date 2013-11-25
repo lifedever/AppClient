@@ -10,6 +10,9 @@ import cn.net.hlsq.app.constant.StepEnum;
 import cn.net.hlsq.app.ui.button.FirstButton;
 import cn.net.hlsq.app.ui.button.SecondButton;
 import cn.net.hlsq.app.ui.button.ThirdButton;
+import cn.net.hlsq.app.ui.panel.buss.FirstPanel;
+import cn.net.hlsq.app.ui.panel.buss.SecondPanel;
+import cn.net.hlsq.app.ui.panel.buss.ThirdPanel;
 
 import javax.swing.border.MatteBorder;
 

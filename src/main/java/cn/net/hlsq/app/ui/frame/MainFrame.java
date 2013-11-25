@@ -8,7 +8,6 @@ import javax.swing.JFrame;
 import org.springframework.stereotype.Component;
 
 import cn.net.hlsq.app.model.AppInfo;
-import cn.net.hlsq.app.ui.base.MyFrame;
 import cn.net.hlsq.app.ui.base.MyMenuBar;
 import cn.net.hlsq.app.ui.panel.MainPanel;
 import cn.net.hlsq.app.utils.BeanUtils;
@@ -50,7 +49,7 @@ public class MainFrame extends MyFrame {
 
 		Toolkit kit = this.getToolkit();
 		Dimension winSize = kit.getScreenSize();
-		setBounds(winSize.width / 4, winSize.height / 4, // 位置
+		setBounds((winSize.width - appInfo.getAppWidth()) / 2, (winSize.height - appInfo.getAppHeight()) / 2, // 位置
 				appInfo.getAppWidth(), appInfo.getAppHeight()); // 大小
 	}
 

@@ -4,7 +4,7 @@ import javax.swing.SwingUtilities;
 
 import org.junit.Test;
 
-import cn.net.hlsq.app.ui.MainFrame;
+import cn.net.hlsq.app.ui.frame.MainFrame;
 
 
 public class ThreadTest {

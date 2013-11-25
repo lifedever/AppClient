@@ -2,7 +2,7 @@ package cn.net.hlsq.app.ui.button;
 
 import javax.swing.JButton;
 
-import cn.net.hlsq.app.event.buss.BaseStepOperation;
+import cn.net.hlsq.app.event.buss.BaseStepHandler;
 
 public class BaseButton extends JButton {
 
@@ -10,7 +10,7 @@ public class BaseButton extends JButton {
 	public static int step = 0;
 
 	public BaseButton() {
-		addActionListener(new BaseStepOperation());
+		addActionListener(new BaseStepHandler());
 	}
 
 }

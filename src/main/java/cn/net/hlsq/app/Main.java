@@ -1,6 +1,6 @@
 package cn.net.hlsq.app;
 
-import cn.net.hlsq.app.ui.MainFrame;
+import cn.net.hlsq.app.ui.frame.MainFrame;
 
 /**
  * Hello world!
