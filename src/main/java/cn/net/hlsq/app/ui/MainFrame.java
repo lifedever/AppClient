@@ -8,7 +8,7 @@ import javax.swing.JFrame;
 import org.springframework.stereotype.Component;
 
 import cn.net.hlsq.app.model.AppInfo;
-import cn.net.hlsq.app.ui.core.MyFrame;
+import cn.net.hlsq.app.ui.base.MyFrame;
 import cn.net.hlsq.app.utils.BeanUtils;
 
 /**

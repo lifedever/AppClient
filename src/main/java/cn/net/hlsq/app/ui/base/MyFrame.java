@@ -1,4 +1,4 @@
-package cn.net.hlsq.app.ui.core;
+package cn.net.hlsq.app.ui.base;
 
 import java.awt.Toolkit;
 
