@@ -1,4 +1,4 @@
-package cn.net.hlsq.app.ui;
+package cn.net.hlsq.app.ui.panel;
 
 import java.awt.BorderLayout;
 import java.awt.CardLayout;
@@ -10,9 +10,6 @@ import cn.net.hlsq.app.constant.StepEnum;
 import cn.net.hlsq.app.ui.button.FirstButton;
 import cn.net.hlsq.app.ui.button.SecondButton;
 import cn.net.hlsq.app.ui.button.ThirdButton;
-import cn.net.hlsq.app.ui.panel.FirstPanel;
-import cn.net.hlsq.app.ui.panel.SecondPanel;
-import cn.net.hlsq.app.ui.panel.ThirdPanel;
 
 import javax.swing.border.MatteBorder;
 

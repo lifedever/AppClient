@@ -1,4 +1,4 @@
-package cn.net.hlsq.app.ui;
+package cn.net.hlsq.app.ui.panel;
 
 import java.awt.BorderLayout;
 
@@ -22,7 +22,8 @@ public class MainPanel extends JPanel {
 	 * @author gefangshuai
 	 */
 	private void initComponent() {
-		add(new StepPanel(), BorderLayout.CENTER);
+		add(new JPanel());
+//		add(new StepPanel(), BorderLayout.CENTER);
 	}
 
 	/**

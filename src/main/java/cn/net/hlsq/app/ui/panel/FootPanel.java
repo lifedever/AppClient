@@ -1,4 +1,4 @@
-package cn.net.hlsq.app.ui;
+package cn.net.hlsq.app.ui.panel;
 
 import java.awt.FlowLayout;
 

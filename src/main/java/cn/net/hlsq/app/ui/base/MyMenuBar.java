@@ -1,4 +1,4 @@
-package cn.net.hlsq.app.ui;
+package cn.net.hlsq.app.ui.base;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

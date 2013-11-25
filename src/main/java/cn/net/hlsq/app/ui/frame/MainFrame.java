@@ -1,4 +1,4 @@
-package cn.net.hlsq.app.ui;
+package cn.net.hlsq.app.ui.frame;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
@@ -9,6 +9,8 @@ import org.springframework.stereotype.Component;
 
 import cn.net.hlsq.app.model.AppInfo;
 import cn.net.hlsq.app.ui.base.MyFrame;
+import cn.net.hlsq.app.ui.base.MyMenuBar;
+import cn.net.hlsq.app.ui.panel.MainPanel;
 import cn.net.hlsq.app.utils.BeanUtils;
 
 /**
