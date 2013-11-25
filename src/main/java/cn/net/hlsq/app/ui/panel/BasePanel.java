@@ -1,4 +1,4 @@
-package cn.net.hlsq.app.ui.step;
+package cn.net.hlsq.app.ui.panel;
 
 import javax.swing.JPanel;
 

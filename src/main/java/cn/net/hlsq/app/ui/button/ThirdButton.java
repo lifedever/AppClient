@@ -1,19 +1,17 @@
-package cn.net.hlsq.app.ui.step;
+package cn.net.hlsq.app.ui.button;
 
 import java.awt.Color;
 import java.awt.Font;
 
 import org.jb2011.lnf.beautyeye.ch3_button.BEButtonUI;
 
-public class FirstButton extends BaseButton {
-
+public class ThirdButton extends BaseButton {
 	private static final long serialVersionUID = 1L;
 
-	public FirstButton() {
-		setText("上一步");
-		setEnabled(false);
+	public ThirdButton() {
+		setText("重新开始");
 		setForeground(Color.WHITE);
+		setUI(new BEButtonUI().setNormalColor(BEButtonUI.NormalColor.red));
 		setFont(new Font("宋体", Font.BOLD, 13));
-		setUI(new BEButtonUI().setNormalColor(BEButtonUI.NormalColor.green));
 	}
 }

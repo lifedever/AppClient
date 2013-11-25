@@ -7,12 +7,12 @@ import java.awt.Color;
 import javax.swing.JPanel;
 
 import cn.net.hlsq.app.constant.StepEnum;
-import cn.net.hlsq.app.ui.step.FirstButton;
-import cn.net.hlsq.app.ui.step.FirstPanel;
-import cn.net.hlsq.app.ui.step.SecondButton;
-import cn.net.hlsq.app.ui.step.ThirdButton;
-import cn.net.hlsq.app.ui.step.ThirdPanel;
-import cn.net.hlsq.app.ui.step.SecondPanel;
+import cn.net.hlsq.app.ui.button.FirstButton;
+import cn.net.hlsq.app.ui.button.SecondButton;
+import cn.net.hlsq.app.ui.button.ThirdButton;
+import cn.net.hlsq.app.ui.panel.FirstPanel;
+import cn.net.hlsq.app.ui.panel.SecondPanel;
+import cn.net.hlsq.app.ui.panel.ThirdPanel;
 
 import javax.swing.border.MatteBorder;
 

@@ -9,10 +9,10 @@ import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-import cn.net.hlsq.app.ui.step.BaseButton;
-import cn.net.hlsq.app.ui.step.FirstButton;
-import cn.net.hlsq.app.ui.step.SecondButton;
-import cn.net.hlsq.app.ui.step.ThirdButton;
+import cn.net.hlsq.app.ui.button.BaseButton;
+import cn.net.hlsq.app.ui.button.FirstButton;
+import cn.net.hlsq.app.ui.button.SecondButton;
+import cn.net.hlsq.app.ui.button.ThirdButton;
 
 public class BaseStepOperation implements ActionListener {
 	CardLayout cardLayout;
@@ -52,7 +52,7 @@ public class BaseStepOperation implements ActionListener {
 		} else if (button instanceof ThirdButton) {
 			thirdButtonAction();
 		}
-		System.out.println(BaseButton.step);
+		
 		if (BaseButton.step == 0) {
 			getFirstButton(e).setEnabled(false);
 			getSecondButton(e).setEnabled(true);

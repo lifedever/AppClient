@@ -1,4 +1,4 @@
-package cn.net.hlsq.app.ui.step;
+package cn.net.hlsq.app.ui.panel;
 
 import java.awt.Color;
 
@@ -13,7 +13,7 @@ public class FirstPanel extends BasePanel {
 
 	private void init() {
 		// TODO 完成第一步的控件布局及功能
-		setBackground(Color.red);
+		setBackground(Color.WHITE);
 		setStep(StepEnum.ONE);
 	}
 }
