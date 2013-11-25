@@ -1,5 +1,7 @@
 package cn.net.hlsq.app.ui.core;
 
+import java.awt.Toolkit;
+
 import javax.swing.JFrame;
 
 import org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper;
@@ -21,5 +23,8 @@ public class MyFrame extends JFrame {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	public MyFrame() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(MyFrame.class.getResource("/res/logo.jpg")));
 	}
 }
