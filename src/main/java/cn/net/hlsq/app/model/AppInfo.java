@@ -20,6 +20,8 @@ public class AppInfo {
 	private int appHeight;
 	@Value("#{properties['app.about']}")
 	private String appAbout;
+	@Value("#{properties['app.logo']}")
+	private String logo;
 
 	public String getAppName() {
 		return appName;
@@ -51,6 +53,14 @@ public class AppInfo {
 
 	public void setAppAbout(String appAbout) {
 		this.appAbout = appAbout;
+	}
+
+	public String getLogo() {
+		return logo;
+	}
+
+	public void setLogo(String logo) {
+		this.logo = logo;
 	}
 
 }

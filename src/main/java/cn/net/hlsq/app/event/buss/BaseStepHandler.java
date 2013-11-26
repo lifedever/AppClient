@@ -13,11 +13,19 @@ import cn.net.hlsq.app.ui.button.BaseButton;
 import cn.net.hlsq.app.ui.button.FirstButton;
 import cn.net.hlsq.app.ui.button.SecondButton;
 import cn.net.hlsq.app.ui.button.ThirdButton;
+import cn.net.hlsq.app.ui.panel.BasePanel;
 
 public class BaseStepHandler implements ActionListener {
 	CardLayout cardLayout;
 	JPanel cardPanel;
 
+	/**
+	 * cardPanel和basePanel在此方法执行过后才有值，否则会为null
+	 * 
+	 * @author gefangshuai
+	 * @param e
+	 * @return
+	 */
 	CardLayout getCardLayout(ActionEvent e) {
 		JButton currentButton = (JButton) e.getSource();
 		BorderLayout borderLayout = (BorderLayout) currentButton.getParent().getParent().getLayout();
@@ -61,6 +69,7 @@ public class BaseStepHandler implements ActionListener {
 			getFirstButton(e).setEnabled(true);
 			getSecondButton(e).setEnabled(true);
 		}
+
 	}
 
 	/**
@@ -77,6 +86,8 @@ public class BaseStepHandler implements ActionListener {
 	 */
 	private void secondButtonAction(ActionEvent e) {
 		getCardLayout(e).next(cardPanel);
+		getBasePanel(cardPanel, BaseButton.step - 1).execute();
+
 	}
 
 	/**
@@ -100,5 +111,10 @@ public class BaseStepHandler implements ActionListener {
 	private void resetPanel(ActionEvent e) {
 		getCardLayout(e).first(cardPanel);
 		BaseButton.step = 0;
+	}
+
+	private BasePanel getBasePanel(JPanel cardPanel, int index) {
+		BasePanel basePanel = (BasePanel) cardPanel.getComponent(index);
+		return basePanel;
 	}
 }

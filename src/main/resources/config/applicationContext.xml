@@ -60,4 +60,9 @@
 	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
 		<property name="dataSource" ref="dataSource" />
 	</bean>
+	<bean id="simpleJdbcInsert" class="org.springframework.jdbc.core.simple.SimpleJdbcInsert">
+		<constructor-arg type="javax.sql.DataSource">
+			<ref bean="dataSource" />
+		</constructor-arg>
+	</bean>
 </beans>

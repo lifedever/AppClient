@@ -13,8 +13,13 @@ public class SecondPanel extends BasePanel {
 	}
 
 	private void init() {
-		// TODO 完成第二步的控件布局及功能
 		setBackground(Color.green);
 		setStep(StepEnum.TWO);
+	}
+
+	// TODO 完成第二步的控件布局及功能
+	@Override
+	public void execute() {
+		System.out.println("第2个面板的值存数据库");
 	}
 }

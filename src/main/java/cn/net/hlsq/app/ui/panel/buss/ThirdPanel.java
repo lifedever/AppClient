@@ -13,8 +13,13 @@ public class ThirdPanel extends BasePanel {
 	}
 
 	private void init() {
-		// TODO 完成第三步的控件布局及功能
 		setBackground(Color.cyan);
 		setStep(StepEnum.THREE);
+	}
+
+	// TODO 完成第三步的控件布局及功能
+	@Override
+	public void execute() {
+
 	}
 }

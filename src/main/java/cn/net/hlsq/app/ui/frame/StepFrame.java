@@ -11,8 +11,8 @@ public class StepFrame extends MyFrame {
 
 	private static StepFrame instance = null;
 	private static final long serialVersionUID = 1L;
-	private int width = 750;
-	private int height = 450;
+	private int width = 650;
+	private int height = 420;
 
 	private StepFrame() {
 		initProp();
@@ -24,6 +24,7 @@ public class StepFrame extends MyFrame {
 		if (instance == null) {
 			instance = new StepFrame();
 		}
+		instance.setVisible(true);
 		return instance;
 	}
 
